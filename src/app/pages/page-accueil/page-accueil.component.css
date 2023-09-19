@@ -1,0 +1,32 @@
+/* .entreCercles {
+    align-items: start;
+    display: flex;
+    height: 10vw;
+} */
+.miseEnPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.titreAccroche {
+    padding-top: 1rem;   
+}
+
+img {
+    width: 70%;
+    margin-bottom: 0.5rem;
+}
+
+h1, h2 {
+    font-size: 1.2rem; 
+    font-weight: bold;
+}
+
+.paragraphes {
+    width: 60%;
+   
+}
+
