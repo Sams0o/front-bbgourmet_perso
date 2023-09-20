@@ -23,6 +23,7 @@ export class ConnexionComponent {
       next: (response) => {
         console.log('Connexion réussie:', response);
         console.log('Token reçu:', response.accessToken);
+        localStorage.setItem('token', response.accessToken);
         
          this.router.navigate(['/profil-utilisateur']);
       },

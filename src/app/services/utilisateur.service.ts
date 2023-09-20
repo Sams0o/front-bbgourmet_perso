@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, tap } from 'rxjs';
 import { Utilisateur } from '../models/utilisateur.model';
 import { LoginUtilisateur } from '../models/loginUtilisateur.model';
 import { ReponseConnexion } from '../models/reponseConnexion.model';
@@ -20,5 +20,13 @@ export class UtilisateurService {
 
   connexionUtilisateur(data: LoginUtilisateur): Observable<ReponseConnexion> {
     return this.http.post<ReponseConnexion>(`${this.baseApiUrl}/login`, data);
+  }
+
+  infoProfilUtilisateur(): Observable<Utilisateur> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.get<Utilisateur>('http://localhost:3000/api/utilisateurs', { headers });
   }
 }
