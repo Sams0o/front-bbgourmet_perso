@@ -7,7 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PageAlimentComponent } from './pages/page-aliment/page-aliment.component';
 import { InscriptionComponent } from './components/inscription/inscription.component';
 import { ConnexionComponent } from './components/connexion/connexion.component';
-import { ProfilUtilisateurComponent } from './components/profil-utilisateur/profil-utilisateur.component';
+import { PageUtilisateurComponent } from './pages/page-utilisateur/page-utilisateur.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'inscription', component: InscriptionComponent },
   { path: 'connexion', component: ConnexionComponent },
-  { path: 'profil-utilisateur', component: ProfilUtilisateurComponent },
+  { path: 'profil-utilisateur', component: PageUtilisateurComponent},
   { path: 'aliments', component: PageAlimentComponent },
 ];
 
