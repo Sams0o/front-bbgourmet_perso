@@ -1,0 +1,18 @@
+.btn-color {
+    background-color: #225777;
+    color: #FFFFFF;
+    padding: 0 75px;
+}
+
+button {
+    border-radius: 28px;
+    height: 50px;
+}
+
+.custom-input {
+    background-color: rgba(34, 87, 119, 0.2);
+    border-radius: 28px;
+    height: 50px;
+    margin-bottom: 15px;
+    /* Espacement entre les champs */
+}

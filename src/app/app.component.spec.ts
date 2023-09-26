@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'front-bbgourmet'`, () => {
+  it(`should have as title 'front_bbgourmet_perso'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('front-bbgourmet');
+    expect(app.title).toEqual('front_bbgourmet_perso');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('front-bbgourmet app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('front_bbgourmet_perso app is running!');
   });
 });

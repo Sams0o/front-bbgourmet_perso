@@ -1,24 +1,39 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageCommencerComponent } from './pages/page-commencer/page-commencer.component';
-import { PageAccueilComponent } from './pages/page-accueil/page-accueil.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { PageAlimentComponent } from './pages/page-aliment/page-aliment.component';
+import { CommencerComponent } from './pages/commencer/commencer.component';
+import { AccueilComponent } from './pages/accueil/accueil.component';
+import { AlimentComponent } from './pages/aliment/aliment.component';
+import { UtilisateurComponent } from './pages/utilisateur/utilisateur.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { InscriptionComponent } from './components/inscription/inscription.component';
 import { ConnexionComponent } from './components/connexion/connexion.component';
-import { PageUtilisateurComponent } from './pages/page-utilisateur/page-utilisateur.component';
+import { ProfilEnfantComponent } from './components/profil-enfant/profil-enfant.component';
+import { AjoutEnfantComponent } from './components/ajout-enfant/ajout-enfant.component';
+import { ModifEnfantComponent } from './components/modif-enfant/modif-enfant.component';
+import { ModifAlimentComponent } from './components/modif-aliment/modif-aliment.component';
+import { SupprAlimentComponent } from './components/suppr-aliment/suppr-aliment.component';
+import { AjoutAlimentComponent } from './components/ajout-aliment/ajout-aliment.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: PageAccueilComponent },
-  { path: 'commencer', component: PageCommencerComponent },
-  { path: 'footer', component: FooterComponent },
-  { path: 'navbar', component: NavbarComponent },
-  { path: 'inscription', component: InscriptionComponent },
-  { path: 'connexion', component: ConnexionComponent },
-  { path: 'profil-utilisateur', component: PageUtilisateurComponent},
-  { path: 'aliments', component: PageAlimentComponent },
+  { path: '', component: CommencerComponent },
+  { path: 'home', component: AccueilComponent },
+  { path: 'aliment', component: AlimentComponent },
+  { path: 'aliment/ajouter', component: AjoutAlimentComponent },
+  { path: 'aliment/modifier/:id', component: ModifAlimentComponent },
+  { path: 'aliment/supprimer/:id', component: SupprAlimentComponent },
+  { path: 'profil-utilisateur', component: UtilisateurComponent },
+  { path: 'profil-utilisateur/ok', component: UtilisateurComponent },
+  { path: 'profil-utilisateur/inscription', component: InscriptionComponent },
+  { path: 'profil-utilisateur/connexion', component: ConnexionComponent },
+  { path: 'profil-utilisateur/child/add', component: AjoutEnfantComponent },
+  {
+    path: 'profil-utilisateur/child/update/:id',
+    component: ModifEnfantComponent,
+  },
+  { path: 'profil-utilisateur/child/:id', component: ProfilEnfantComponent },
+ 
+
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

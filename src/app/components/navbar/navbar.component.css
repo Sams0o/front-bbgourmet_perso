@@ -1,24 +1,22 @@
 * {
     background-color: #225777;
-    color: #ffffff;
+    color: #F6F1EB;
+
 }
 
-.logoNavbar {
-    width: 3vw;
-    height: 3vw;
+nav {
+    font-size: 20px;
+    border-bottom: rgba(0, 0, 0, 0.2) solid;
 }
 
-#navbarNav {
-    margin-left: 70%;
-    font-size: 1.2rem;
+#logoNavBar {
+    margin-left: 1rem;
+    width: 2rem;
+    height: 2rem;
 }
 
-.nav-link:hover {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration-line: underline;
-   
+.logoOnglet {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.1rem;
 }
-
-
-

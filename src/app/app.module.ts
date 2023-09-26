@@ -1,58 +1,62 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageCommencerComponent } from './pages/page-commencer/page-commencer.component';
-import { PageAccueilComponent } from './pages/page-accueil/page-accueil.component';
-import { PageUtilisateurComponent } from './pages/page-utilisateur/page-utilisateur.component';
-import { PageAlimentComponent } from './pages/page-aliment/page-aliment.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CommencerComponent } from './pages/commencer/commencer.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PresentationComponent } from './components/presentation/presentation.component';
-import { InscriptionComponent } from './components/inscription/inscription.component';
-import { ConnexionComponent } from './components/connexion/connexion.component';
-import { ProfilUtilisateurComponent } from './components/profil-utilisateur/profil-utilisateur.component';
-import { ProfilEnfantComponent } from './components/profil-enfant/profil-enfant.component';
-import { CardEnfantComponent } from './components/card-enfant/card-enfant.component';
-import { AjoutEnfantComponent } from './components/ajout-enfant/ajout-enfant.component';
-import { ModifEnfantComponent } from './components/modif-enfant/modif-enfant.component';
-import { ListeAlimentComponent } from './components/liste-aliment/liste-aliment.component';
+import { AccueilComponent } from './pages/accueil/accueil.component';
+import { AlimentComponent } from './pages/aliment/aliment.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { UtilisateurComponent } from './pages/utilisateur/utilisateur.component';
 import { AjoutAlimentComponent } from './components/ajout-aliment/ajout-aliment.component';
+import { AjoutEnfantComponent } from './components/ajout-enfant/ajout-enfant.component';
+import { CardEnfantComponent } from './components/card-enfant/card-enfant.component';
+import { ConnexionComponent } from './components/connexion/connexion.component';
+import { InscriptionComponent } from './components/inscription/inscription.component';
+import { ListeAlimentComponent } from './components/liste-aliment/liste-aliment.component';
 import { ModifAlimentComponent } from './components/modif-aliment/modif-aliment.component';
+import { ModifEnfantComponent } from './components/modif-enfant/modif-enfant.component';
+import { ProfilEnfantComponent } from './components/profil-enfant/profil-enfant.component';
+import { ProfilUtilisateurComponent } from './components/profil-utilisateur/profil-utilisateur.component';
 import { SupprAlimentComponent } from './components/suppr-aliment/suppr-aliment.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageCommencerComponent,
-    PageAccueilComponent,
-    PageUtilisateurComponent,
-    PageAlimentComponent,
     NavbarComponent,
+    CommencerComponent,
     FooterComponent,
-    PresentationComponent,
-    InscriptionComponent,
-    ConnexionComponent,
-    ProfilUtilisateurComponent,
-    ProfilEnfantComponent,
-    CardEnfantComponent,
-    AjoutEnfantComponent,
-    ModifEnfantComponent,
-    ListeAlimentComponent,
+    AccueilComponent,
+    AlimentComponent,
+    NotFoundComponent,
+    UtilisateurComponent,
     AjoutAlimentComponent,
+    AjoutEnfantComponent,
+    CardEnfantComponent,
+    ConnexionComponent,
+    InscriptionComponent,
+    ListeAlimentComponent,
     ModifAlimentComponent,
+    ModifEnfantComponent,
+    ProfilEnfantComponent,
+    ProfilUtilisateurComponent,
     SupprAlimentComponent,
-    PageNotFoundComponent
+    FilterBarComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
+    FormsModule,
+    NgSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

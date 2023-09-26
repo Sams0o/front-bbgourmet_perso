@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Utilisateur } from 'src/app/models/utilisateur.model';
-import { UtilisateurService } from 'src/app/services/utilisateur.service';
+import { Utilisateur } from 'src/app/models/utilisateur';
 
 @Component({
   selector: 'app-profil-utilisateur',
@@ -11,20 +10,26 @@ import { UtilisateurService } from 'src/app/services/utilisateur.service';
 export class ProfilUtilisateurComponent {
   @Input() profil!: Utilisateur;
 
-  constructor(
-    private utilisateurService: UtilisateurService,
-    private router: Router
-  ) {}
+  constructor() {}
 
   getInitials(): string {
     if (this.profil.nom && this.profil.prenom) {
-      return this.profil.nom.charAt(0) + this.profil.prenom.charAt(0);
+      return (
+        this.profil.nom.charAt(0).toUpperCase() +
+        this.profil.prenom.charAt(0).toUpperCase()
+      );
     }
     return '';
   }
 
+  majusculeFirst() {
+    const prenom =  this.profil.nom.charAt(0).toUpperCase() + this.profil.nom.slice(1)
+    console.log('prenom '+prenom);
+    return prenom
+  }
+
   deconnexion() {
-    localStorage.removeItem('token');
-    this.router.navigate(['/home']);
+    localStorage.clear()
+    location.reload();
   }
 }
