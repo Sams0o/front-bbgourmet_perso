@@ -21,7 +21,7 @@ export class InscriptionComponent {
 
   confirmMdpError = false;
 
-  isFormValidate = false;
+  isFormSubmit = false;
 
   constructor(
     private utilisateurService: UtilisateurService,
@@ -30,7 +30,7 @@ export class InscriptionComponent {
 
   inscrire(inscriptionForm: NgForm) {
 
-    this.isFormValidate = true;
+    this.isFormSubmit = true;
 
     // Verifier si les mots de passe correspondent 
     this.confirmMdpError = this.utilisateur.mot_de_passe !== this.utilisateur.mot_de_passe_confirme;
